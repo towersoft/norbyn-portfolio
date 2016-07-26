@@ -1,9 +1,9 @@
 {
-  "name": "angular-seed",
+  "name": "norbyn-portfolio",
   "private": true,
   "version": "0.0.0",
   "description": "A starter project for AngularJS",
-  "repository": "https://github.com/angular/angular-seed",
+  "repository": "https://github.com/towersoft/norbyn-portfolio",
   "license": "MIT",
   "devDependencies": {
     "bower": "^1.7.7",
@@ -18,8 +18,12 @@
 	"node-sass": "^3.8.0",
 	"nodemon": "^1.10.0"
   },
-  "scripts": {
-    "start": "http-server -a localhost -p 8000 -c-1 ./app",
+  "scripts": {  
+
+    "prestart": "npm run build-css",
+	"start": "http-server -a localhost -p 8000 -c-1 ./app",
+    
+    "build-css": "node-sass --include-path scss scss/app.scss app/app.css",
 
     "test": "karma start karma.conf.js",
     "test-single-run": "karma start karma.conf.js --single-run",
