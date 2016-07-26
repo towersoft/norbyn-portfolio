@@ -1,3 +1,4 @@
+@import url(//fonts.googleapis.com/css?family=Open+Sans);
 html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
   margin: 0;
   padding: 0;
@@ -62,16 +63,71 @@ hr {
 input, select {
   vertical-align: middle; }
 
-.menu {
-  list-style: none;
-  border-bottom: 1px solid #d7d8d6;
-  margin-bottom: 30px;
-  padding: 0 0 15px; }
-  .menu > li {
-    display: inline; }
-  .menu > li:before {
-    content: "|";
-    padding-right: 0.3em; }
-  .menu > li:nth-child(1):before {
-    content: "";
-    padding: 0; }
+body {
+  margin: 20px 80px;
+  font-family: 'Open Sans', sans-serif; }
+  body a, body a:visited {
+    color: #333333;
+    text-decoration: none; }
+  body .header {
+    border-bottom: 1px solid #d7d8d6;
+    margin-bottom: 30px;
+    padding: 0 0 15px;
+    overflow: auto; }
+    body .header .title {
+      display: inline;
+      font-size: 20px;
+      color: #333333; }
+    body .header .navigation {
+      list-style: none;
+      line-height: 20px;
+      float: right; }
+      body .header .navigation > li {
+        display: inline;
+        padding-left: 15px; }
+  body .content {
+    min-height: 400px; }
+    body .content .avatar {
+      border: 1px solid #d7d8d6;
+      float: left;
+      padding: 5px; }
+      body .content .avatar img {
+        height: 200px; }
+    body .content .avatar {
+      display: inline-block;
+      margin-right: 20px; }
+    body .content .description {
+      display: inline; }
+    body .content .account {
+      margin-top: 20px; }
+      body .content .account .title {
+        font-weight: bold;
+        padding-bottom: 5px; }
+    body .content .account:first-child {
+      margin-top: 30px; }
+    body .content .email {
+      text-decoration: underline; }
+    body .content .email::before, body .content .link::before {
+      content: url("../img/mail.png");
+      padding-right: 10px;
+      vertical-align: middle; }
+    body .content .link::before {
+      content: url("../img/link.png"); }
+    body .content ul {
+      list-style: inside url("../img/icons/bullet.png"); }
+    body .content .contact h2 {
+      text-align: center;
+      text-transform: uppercase; }
+
+.footer {
+  position: fixed;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  text-align: center;
+  width: 200px; }
+
+@media (min-width: 1030px) {
+  .content {
+    margin: 0 15em; } }

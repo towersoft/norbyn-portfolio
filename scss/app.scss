@@ -1,22 +1,193 @@
-html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}nav ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}a{margin:0;padding:0;font-size:100%;vertical-align:baseline;background:transparent}ins{background-color:#ff9;color:#000;text-decoration:none}mark{background-color:#ff9;color:#000;font-style:italic;font-weight:bold}del{text-decoration:line-through}abbr[title],dfn[title]{border-bottom:1px dotted;cursor:help}table{border-collapse:collapse;border-spacing:0}hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0}input,select{vertical-align:middle}
-.menu {
-  list-style: none;
-  border-bottom: 1px solid #d7d8d6;
-  margin-bottom: 30px;
-  padding: 0 0 15px;
+@import url(//fonts.googleapis.com/css?family=Open+Sans);
 
-  > li {
-    display: inline;
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent
+}
+
+body {
+  line-height: 1
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block
+}
+
+nav ul {
+  list-style: none
+}
+
+blockquote, q {
+  quotes: none
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: none
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent
+}
+
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none
+}
+
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold
+}
+
+del {
+  text-decoration: line-through
+}
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0
+}
+
+input, select {
+  vertical-align: middle
+}
+
+body {
+  margin: 20px 80px;
+  font-family: 'Open Sans', sans-serif;
+
+  a, a:visited {
+    color: #333333;
+    text-decoration: none;
   }
 
-  > li:before {
-    content: "|";
-    padding-right: 0.3em;
+  .header {
+    border-bottom: 1px solid #d7d8d6;
+    margin-bottom: 30px;
+    padding: 0 0 15px;
+    overflow: auto;
+
+    .title {
+      display: inline;
+      font-size: 20px;
+      color: #333333;
+    }
+
+    .navigation {
+      list-style: none;
+      line-height: 20px;
+      float: right;
+
+      > li {
+        display: inline;
+        padding-left: 15px;
+      }
+    }
   }
 
-  > li:nth-child(1):before {
-    content: "";
-    padding: 0;
+  .content {
+    min-height: 400px;
+
+    .avatar {
+      border: 1px solid #d7d8d6;
+      float: left;
+      padding: 5px;
+
+      img {
+        height: 200px;
+      }
+    }
+
+    .avatar {
+      display: inline-block;
+      margin-right: 20px;
+    }
+
+    .description {
+      display: inline;
+    }
+
+    .account {
+      margin-top: 20px;
+
+      .title {
+        font-weight: bold;
+        padding-bottom: 5px;
+      }
+    }
+
+    .account:first-child {
+      margin-top: 30px;
+    }
+
+    .email {
+      text-decoration: underline;
+    }
+
+    .email::before {
+      content: url("../img/mail.png");
+      padding-right: 10px;
+      vertical-align: middle;
+    }
+
+    .link::before {
+      @extend .email::before;
+      content: url("../img/link.png");
+    }
+
+    ul {
+      list-style: inside url("../img/icons/bullet.png");
+    }
+
+    .contact {
+      h2 {
+        text-align: center;
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+
+.footer {
+  position: fixed;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  text-align: center;
+  width: 200px;
+}
+
+@media (min-width: 1030px) {
+  .content {
+    margin: 0 15em;
+
   }
 }
 
