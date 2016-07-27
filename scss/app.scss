@@ -131,6 +131,7 @@ body {
 
     .description {
       display: inline;
+      line-height: 1.2;
     }
 
     .account {
@@ -148,14 +149,21 @@ body {
 
     .project {
       img {
-        width: 30%;
+        width: 15%;
+        display: inline-block;
+        margin-right: 20px;
       }
 
-      .name {
-
+      .info {
+        display: inline-block;
+        vertical-align: top;
+        .name {
+          margin-bottom: 15px;
+        }
       }
-      .tech {
 
+      .desc {
+        font-size: 14px;
       }
     }
 

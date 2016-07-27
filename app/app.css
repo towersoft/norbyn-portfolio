@@ -97,7 +97,8 @@ body {
       display: inline-block;
       margin-right: 20px; }
     body .content .description {
-      display: inline; }
+      display: inline;
+      line-height: 1.2; }
     body .content .account {
       margin-top: 20px; }
       body .content .account .title {
@@ -106,7 +107,16 @@ body {
     body .content .account:first-child, body .content li.skill, body .content .project {
       margin-top: 30px; }
     body .content .project img {
-      width: 30%; }
+      width: 15%;
+      display: inline-block;
+      margin-right: 20px; }
+    body .content .project .info {
+      display: inline-block;
+      vertical-align: top; }
+      body .content .project .info .name {
+        margin-bottom: 15px; }
+    body .content .project .desc {
+      font-size: 14px; }
     body .content .scale {
       position: relative;
       top: -10px;
