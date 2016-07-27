@@ -10,7 +10,14 @@ define([
                 controller: 'ProjectsCtrl'
             });
         }])
-        .controller('ProjectsCtrl', [function () {
-
+        .controller('ProjectsCtrl', ['$http', function ($http) {
+            var project = this;
+            $http.get('http://localhost:3000/posts')
+                .success(function (data) {
+                    console.log(data);
+                })
+                .error(function (data) {
+                    console.log('Error: ' + data);
+                });
         }]);
 });
