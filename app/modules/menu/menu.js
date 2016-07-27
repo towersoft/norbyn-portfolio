@@ -1,14 +1,15 @@
 'use strict';
+define([
+    'angular'
+], function (angular) {
+    angular.module('portfolio.menu', []).controller('MenuCtrl', MenuCtrl);
 
-angular.module('portfolio.menu', [])
+    function MenuCtrl() {
 
-    .controller('MenuCtrl', MenuCtrl);
+        //Saving the this reference
+        var mc = this;
 
-function MenuCtrl() {
-
-    //Saving the this reference
-    var mc = this;
-
-    //Adding a property to the Controller instance
-    mc.title = 'Norbyn Leyva';
-}
+        //Adding a property to the Controller instance
+        mc.title = 'Norbyn Leyva';
+    }
+});

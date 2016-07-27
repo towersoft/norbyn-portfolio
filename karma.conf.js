@@ -5,19 +5,12 @@ module.exports = function (config) {
         basePath: './app',
 
         files: [
-            'lib/angular.js',
-            'lib/angular-route.js',
-            'lib/angular-mocks.js',
-            'modules/home/*.js',
-            'modules/menu/*.js',
-            'modules/projects/*.js',
-            'modules/skills/*.js',
-            'modules/contact/*.js'
+            'modules/menu/*.js'
         ],
 
         autoWatch: true,
 
-        frameworks: ['jasmine'],
+        frameworks: ['jasmine', 'requirejs'],
 
         browsers: ['Chrome'],
 
