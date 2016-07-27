@@ -7,6 +7,7 @@ angular.module('myApp', [
   'myApp.projects',
   'myApp.skills',
   'myApp.contact',
+  'myApp.menu',
   'myApp.version'
 ]).
 config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {

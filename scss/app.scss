@@ -142,8 +142,32 @@ body {
       }
     }
 
-    .account:first-child {
+    .account:first-child, li.skill, .project {
       margin-top: 30px;
+    }
+
+    .project {
+      img {
+        width: 30%;
+      }
+
+      .name {
+
+      }
+      .tech {
+
+      }
+    }
+
+    .scale {
+      position: relative;
+      top: -10px;
+      background: #d2b378;
+      padding: 2px;
+      border-radius: 8px;
+      display: inline-block;
+      min-width: 18px;
+      text-align: center;
     }
 
     .email {
@@ -165,11 +189,9 @@ body {
       list-style: inside url("../img/icons/bullet.png");
     }
 
-    .contact {
-      h2 {
-        text-align: center;
-        text-transform: uppercase;
-      }
+    h2.subtitle {
+      text-align: center;
+      text-transform: uppercase;
     }
   }
 }
@@ -186,7 +208,7 @@ body {
 
 @media (min-width: 1030px) {
   .content {
-    margin: 0 15em;
+    margin: 0 10em;
 
   }
 }

@@ -16,8 +16,8 @@
     <link rel="stylesheet" href="app.css">
 </head>
 <body>
-<div class="header">
-    <h1 class="title">Norbyn Leyva</h1>
+<div class="header" ng-controller="MenuCtrl as mc">
+    <h1 class="title">{{mc.title}}</h1>
     <ul class="navigation">
         <li><a href="#!/home">Home Page</a></li>
         <li><a href="#!/projects">Projects</a></li>
@@ -30,16 +30,19 @@
     <div ng-view></div>
 </div>
 
-<!-- In production use:
-<script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
--->
-<script src="bower_components/angular/angular.js"></script>
-<script src="bower_components/angular-route/angular-route.js"></script>
+<script src="lib/angular.js"></script>
+<script src="lib/angular-route.js"></script>
+<script type="text/javascript" src="lib/angular-cookies.min.js"></script>
+<script type="text/javascript" src="lib/angular-local-storage.min.js"></script>
+<!--<script type="text/javascript" src="assets/js/angular-route.min.js"></script>-->
+<script type="text/javascript" src="lib/angular-translate.min.js"></script>
+<script type="text/javascript" src="lib/angular-translate-loader-static-files.min.js"></script>
 <script src="app.js"></script>
 <script src="home/home.js"></script>
 <script src="projects/projects.js"></script>
 <script src="skills/skills.js"></script>
 <script src="contact/contact.js"></script>
+<script src="menu/menu.js"></script>
 <script src="components/version/version.js"></script>
 <script src="components/version/version-directive.js"></script>
 <script src="components/version/interpolate-filter.js"></script>
