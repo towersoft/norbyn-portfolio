@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('myApp.menu', [])
+angular.module('portfolio.menu', [])
 
     .controller('MenuCtrl', MenuCtrl);
 

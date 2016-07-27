@@ -1,8 +1,8 @@
 'use strict';
 
-describe('myApp.menu module', function() {
+describe('portfolio.menu module', function() {
 
-  beforeEach(module('myApp.menu'));
+  beforeEach(module('portfolio.menu'));
 
   describe('menu controller', function(){
 

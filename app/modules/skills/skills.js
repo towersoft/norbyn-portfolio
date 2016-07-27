@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('myApp.skills', ['ngRoute'])
+angular.module('portfolio.skills', ['ngRoute'])
 
     .config(['$routeProvider', function ($routeProvider) {
         $routeProvider.when('/skills', {

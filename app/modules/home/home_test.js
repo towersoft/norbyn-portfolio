@@ -1,8 +1,8 @@
 'use strict';
 
-describe('myApp.home module', function() {
+describe('portfolio.home module', function() {
 
-  beforeEach(module('myApp.home'));
+  beforeEach(module('portfolio.home'));
 
   describe('home controller', function(){
 

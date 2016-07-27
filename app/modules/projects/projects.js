@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('myApp.projects', ['ngRoute'])
+angular.module('portfolio.projects', ['ngRoute'])
 
 .config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/projects', {

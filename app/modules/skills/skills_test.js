@@ -1,8 +1,8 @@
 'use strict';
 
-describe('myApp.skills module', function() {
+describe('portfolio.skills module', function() {
 
-  beforeEach(module('myApp.skills'));
+  beforeEach(module('portfolio.skills'));
 
   describe('skills controller', function(){
 

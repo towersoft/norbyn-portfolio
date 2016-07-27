@@ -1,8 +1,8 @@
 'use strict';
 
-describe('myApp.contact module', function() {
+describe('portfolio.contact module', function() {
 
-  beforeEach(module('myApp.contact'));
+  beforeEach(module('portfolio.contact'));
 
   describe('contact controller', function(){
 
