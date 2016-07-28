@@ -104,19 +104,27 @@ body {
       body .content .account .title {
         font-weight: bold;
         padding-bottom: 5px; }
-    body .content .account:first-child, body .content li.skill, body .content .project {
+    body .content .account:first-child, body .content li.skill, body .content .project, body .content .hover {
       margin-top: 30px; }
-    body .content .project img {
+    body .content .project .animation, body .content .hover .animation, body .content .project img, body .content .project .hover img, body .content .hover .project img, body .content .hover img, body .content .project .info .name, body .content .hover .info .name, body .content .project .desc, body .content .hover .desc {
+      transition: all 0.5s linear; }
+    body .content .project img, body .content .hover img {
       width: 15%;
       display: inline-block;
       margin-right: 20px; }
-    body .content .project .info {
+    body .content .project .info, body .content .hover .info {
       display: inline-block;
       vertical-align: top; }
-      body .content .project .info .name {
+      body .content .project .info .name, body .content .hover .info .name {
         margin-bottom: 15px; }
-    body .content .project .desc {
+    body .content .project .desc, body .content .hover .desc {
       font-size: 14px; }
+    body .content .hover img {
+      width: 25%; }
+    body .content .hover .name {
+      font-size: 20px; }
+    body .content .hover .desc {
+      font-size: 18px; }
     body .content .scale {
       position: relative;
       top: -10px;

@@ -1,3 +1,5 @@
+$imgTransition: all 0.5s linear;
+
 @import url(//fonts.googleapis.com/css?family=Open+Sans);
 
 html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
@@ -148,7 +150,11 @@ body {
     }
 
     .project {
+      .animation {
+        transition: $imgTransition;
+      }
       img {
+        @extend .animation;
         width: 15%;
         display: inline-block;
         margin-right: 20px;
@@ -158,12 +164,27 @@ body {
         display: inline-block;
         vertical-align: top;
         .name {
+          @extend .animation;
           margin-bottom: 15px;
         }
       }
 
       .desc {
+        @extend .animation;
         font-size: 14px;
+      }
+    }
+
+    .hover {
+      @extend .project;
+      img {
+        width: 25%;
+      }
+      .name {
+        font-size: 20px;
+      }
+      .desc {
+        font-size: 18px;
       }
     }
 

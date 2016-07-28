@@ -10,12 +10,12 @@ define([
                 templateUrl: 'modules/projects/projects.html',
                 controller: 'ProjectsCtrl',
                 controllerAs: 'project'
-
             });
         }])
         .controller('ProjectsCtrl', ['$http', function ($http) {
             var project = this;
             project.projects = [];
+            project.hoverClass = '';
             $http.get(endpoint.projects.url)
                 .success(function (data) {
                     project.projects = data;
@@ -23,5 +23,9 @@ define([
                 .error(function (data) {
                     console.log('Error: ' + data);
                 });
+
+            project.animation = function (id) {
+                console.log(id);
+            }
         }]);
 });

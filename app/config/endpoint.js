@@ -1,14 +1,17 @@
+'use strict';
+var BASE_URL = 'http://localhost:8001';
 define({
     projects: {
-        url: 'http://localhost:3000/projects'
+        url: BASE_URL + '/projects'
     },
     skills: {
-        url: 'http://localhost:3000/skills'
+        url: BASE_URL + '/skills?_sort=level&_order=DESC',
+        post: {url: BASE_URL + '/skills'}
     },
     contacts: {
-        url: 'http://localhost:3000/contacts'
+        url: BASE_URL + '/contacts'
     },
     portfolio: {
-        url: 'http://localhost:3000/portfolio'
+        url: BASE_URL + '/portfolio'
     }
 });

@@ -22,5 +22,18 @@ define([
                 .error(function (data) {
                     console.log('Error: ' + data);
                 });
+
+            skill.addSkill = function () {
+                $http.post(endpoint.skills.post.url, JSON.stringify({
+                    "description": "El hacker",
+                    "level": 10
+                }))
+                    .success(function (data) {
+                        console.log('post: ', data);
+                    })
+                    .error(function (data) {
+                        console.log('Error: ' + data);
+                    });
+            }
         }]);
 });

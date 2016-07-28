@@ -1,6 +1,7 @@
 <div><h2 class="subtitle">Projects</h2>
 
-    <div class="project" ng-repeat="p in project.projects">
+    <div class="project" ng-class="hoverClass" ng-repeat="p in project.projects" ng-mouseenter="hoverClass ='hover'"
+         ng-mouseleave="hoverClass =''">
         <img ng-src="{{p.img}}">
 
         <div class="info">
