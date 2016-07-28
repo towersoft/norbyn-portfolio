@@ -1,17 +1,106 @@
 {
-  "posts": [
+  "projects": [
     {
       "id": 1,
-      "title": "json-server",
-      "author": "typicode"
+      "name": "HSBC Sfe 2.1",
+      "description": "This project was made using Dojo",
+      "img": "../img/sfe2.png"
+    },
+    {
+      "id": 2,
+      "name": "HSBC Multi Channel Appointment Booking (MCAB)",
+      "description": "This project was made using Dojo",
+      "img": "../img/mcab.png"
+    },
+    {
+      "id": 3,
+      "name": "HSBC Collections Keynotes",
+      "description": "This project was made using Dojo",
+      "img": "../img/collections.png"
+    },
+    {
+      "id": 4,
+      "name": "HSBC Virtual Collections (VCA)",
+      "description": "This project was made using Dojo",
+      "img": "../img/vca.png"
     }
   ],
-  "comments": [
+  "skills": [
     {
       "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "description": "PHP5 (Codeigniter and Symfony2), Java, Prolog",
+      "level": 9
+    },
+    {
+      "id": 2,
+      "description": "SQL (MySQL, SQL Server)",
+      "level": 8
+    },
+    {
+      "id": 3,
+      "description": "Doctrine, Hibernate, Entity Framework (ORM)",
+      "level": 8
+    },
+    {
+      "id": 4,
+      "description": "JavaScript, jQuery, ExtJS, JSON, AJAX, AngularJS, Dojo",
+      "level": 8
+    },
+    {
+      "id": 5,
+      "description": "HTML 5, CSS 3, Bootstrap, Material Design",
+      "level": 9
+    },
+    {
+      "id": 6,
+      "description": "REST",
+      "level": 10
+    },
+    {
+      "id": 7,
+      "description": "SCRUM8",
+      "level": 8
+    },
+    {
+      "id": 8,
+      "description": "Work in group (GIT, SVN)",
+      "level": 10
+    },
+    {
+      "id": 9,
+      "description": "MEAN Stack (MongoBD, Express, AngularJS, NodeJS)",
+      "level": 8
+    },
+    {
+      "id": 10,
+      "description": "Cryptography (encryption, RSA, MD5, SHA-1)",
+      "level": 8
     }
   ],
-  "profile": {"name": "typicode"}
+  "contacts": [
+    {
+      "id": 1,
+      "name": "Email address",
+      "type": "email",
+      "value": "norbyn.leyva@towersoft.net"
+    },
+    {
+      "id": 2,
+      "name": "Linkedin",
+      "type": "link",
+      "value": "Open my linkedin profile"
+    },
+    {
+      "id": 3,
+      "name": "Github",
+      "type": "link",
+      "value": "Open my github profile"
+    }
+  ],
+  "portfolio": {
+    "id": 1,
+    "username": "Norbyn Leyva Ramiz",
+    "description": "Software Engineer at White TowerSoft Inc with one year experience in frontend development.",
+    "avatar": "img/picture.jpg"
+  }
 }

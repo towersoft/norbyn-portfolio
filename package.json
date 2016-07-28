@@ -26,7 +26,7 @@
     "preinstall": "npm i -g json-server",
     "prestart": "npm run build-css",
     "start": "npm run dev",
-    "build-css": "node-sass --include-path scss scss/app.scss app/app.css",
+    "build-css": "node-sass --include-path scss app/scss/app.scss app/css/app.css",
     "test": "karma start karma.conf.js",
     "test-single-run": "karma start karma.conf.js --single-run",
     "update-webdriver": "webdriver-manager update",

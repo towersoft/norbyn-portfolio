@@ -13,16 +13,13 @@
     <title>My AngularJS App</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="app.css">
+    <link rel="stylesheet" href="css/app.css">
 </head>
 <body>
 <div class="header" ng-controller="MenuCtrl as mc">
     <h1 class="title">{{mc.title}}</h1>
     <ul class="navigation">
-        <li><a href="#/home">Home page</a></li>
-        <li><a href="#/projects">Projects</a></li>
-        <li><a href="#/skills">Skills</a></li>
-        <li><a href="#/contact">Contact</a></li>
+        <li ng-repeat="m in mc.menu"><a ng-href="#/{{m.href}}">{{m.value}}</a></li>
     </ul>
 </div>
 
@@ -30,7 +27,7 @@
     <div ng-view></div>
 </div>
 
-<script src="bower_components/requirejs/require.js" data-main="require-config"></script>
+<script src="bower_components/requirejs/require.js" data-main="config/require-config"></script>
 
 </body>
 <div class="footer">Portfolio: v <span app-version></span></div>

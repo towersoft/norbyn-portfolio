@@ -1,20 +1,24 @@
 'use strict';
 define([
     'angular',
+    'endpoint',
     'angularRoute'
-], function (angular) {
+], function (angular, endpoint) {
     angular.module('portfolio.projects', ['ngRoute'])
         .config(['$routeProvider', function ($routeProvider) {
             $routeProvider.when('/projects', {
                 templateUrl: 'modules/projects/projects.html',
-                controller: 'ProjectsCtrl'
+                controller: 'ProjectsCtrl',
+                controllerAs: 'project'
+
             });
         }])
         .controller('ProjectsCtrl', ['$http', function ($http) {
             var project = this;
-            $http.get('http://localhost:3000/posts')
+            project.projects = [];
+            $http.get(endpoint.projects.url)
                 .success(function (data) {
-                    console.log(data);
+                    project.projects = data;
                 })
                 .error(function (data) {
                     console.log('Error: ' + data);

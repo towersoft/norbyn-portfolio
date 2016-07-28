@@ -11,5 +11,11 @@ define([
 
         //Adding a property to the Controller instance
         mc.title = 'Norbyn Leyva';
+
+        mc.menu = [
+            {"href": "home", "value": "Home page"},
+            {"href": "projects", "value": "Projects"},
+            {"href": "skills", "value": "Skills"},
+            {"href": "contact", "value": "Contact"}];
     }
 });

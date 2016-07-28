@@ -1,13 +1,5 @@
 <h2 class="subtitle">Skills</h2>
 <ul>
-    <li class="skill">PHP5 (Codeigniter and Symfony2), Java, Prolog<span class="scale">9</span></li>
-    <li class="skill">SQL (MySQL, SQL Server)<span class="scale">8</span></li>
-    <li class="skill">Doctrine, Hibernate, Entity Framework (ORM)<span class="scale">8</span></li>
-    <li class="skill">JavaScript, jQuery, ExtJS, JSON, AJAX, AngularJS, Dojo<span class="scale">8</span></li>
-    <li class="skill">HTML 5, CSS 3, Bootstrap, Material Design<span class="scale">9</span></li>
-    <li class="skill">REST<span class="scale">10</span></li>
-    <li class="skill">SCRUM<span class="scale">8</span></li>
-    <li class="skill">Work in group (GIT, SVN)<span class="scale">10</span></li>
-    <li class="skill">MEAN Stack (MongoBD, Express, AngularJS, NodeJS)<span class="scale">8</span></li>
-    <li class="skill">Cryptography (encryption, RSA, MD5, SHA-1)<span class="scale">10</span></li>
+    <li class="skill" ng-repeat="sk in skill.skills">{{sk.description}}<span class="scale">{{sk.level}}</span>
+    </li>
 </ul>
