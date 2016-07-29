@@ -80,8 +80,21 @@ input, select {
   vertical-align: middle
 }
 
+button {
+  height: 40px;
+  padding: 0 10px;
+
+  img {
+    vertical-align: text-bottom;
+  }
+
+  .text {
+    padding-left: 8px;
+  }
+}
+
 body {
-  margin: 20px 80px;
+  margin: 20px 80px 56px 80px;
   font-family: 'Open Sans', sans-serif;
 
   a, a:visited {
@@ -227,12 +240,12 @@ body {
 
 .footer {
   position: fixed;
-  bottom: 20px;
+  bottom: 0;
   left: 0;
   right: 0;
-  margin: 0 auto;
   text-align: center;
-  width: 200px;
+  padding: 20px 0;
+  background: #d7d8d6;
 }
 
 @media (min-width: 1030px) {

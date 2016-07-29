@@ -12,6 +12,7 @@ angular.module('portfolio.skills', ['ngRoute'])
         var vm = this;
         vm.skills = [];
         vm.buttonName = "New skill";
+        vm.source = "img/icons/add.png";
         vm.loadAll = function () {
             $http.get('http://localhost:8001/skills')
                 .success(function (data) {

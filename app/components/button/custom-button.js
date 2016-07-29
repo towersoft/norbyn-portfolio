@@ -6,10 +6,13 @@ angular.module('portfolio.button', [])
         return {
             restrict: 'E',
             scope: {
-                description: "@",
+                src: "=",
+                description: "=",
                 action: "&"
             },
-            templateUrl: 'components/button/custom-button.html'
+            templateUrl: 'components/button/custom-button.html',
+            link: function (scope, element, attrs) {
+            }
         }
     }]);
 
