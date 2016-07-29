@@ -77,11 +77,18 @@ hr {
 }
 
 input, select {
-  vertical-align: middle
+  height: 24px;
+  padding: 1px 5px;
+  vertical-align: middle;
+}
+
+.small {
+  @extend input;
+  width: 50px;
 }
 
 button {
-  height: 40px;
+  height: 30px;
   padding: 0 10px;
 
   img {
@@ -158,8 +165,12 @@ body {
       }
     }
 
-    .account:first-child, li.skill, .project {
+    li.skill, .project {
       margin-top: 30px;
+    }
+
+    li.skill:first-child {
+      margin-top: 0;
     }
 
     .project {
@@ -232,6 +243,7 @@ body {
     }
 
     h2.subtitle {
+      margin-bottom: 30px;
       text-align: center;
       text-transform: uppercase;
     }

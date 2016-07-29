@@ -6,8 +6,8 @@
         </li>
     </ul>
     <div class="float-right">
-        <custom-button src="vm.source" description="vm.buttonName" action="vm.addSkill()">
-            {{description}}
-        </custom-button>
+        <input type="text" placeholder="skill" ng-model="vm.description">
+        <input class="small" type="text" placeholder="level" ng-model="vm.level">
+        <custom-button src="vm.source" description="vm.buttonName" action="vm.addSkill()"></custom-button>
     </div>
 </div>

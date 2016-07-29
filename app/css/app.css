@@ -60,11 +60,16 @@ hr {
   margin: 1em 0;
   padding: 0; }
 
-input, select {
+input, .small, select {
+  height: 24px;
+  padding: 1px 5px;
   vertical-align: middle; }
 
+.small {
+  width: 50px; }
+
 button {
-  height: 40px;
+  height: 30px;
   padding: 0 10px; }
   button img {
     vertical-align: text-bottom; }
@@ -112,8 +117,10 @@ body {
       body .content .account .title {
         font-weight: bold;
         padding-bottom: 5px; }
-    body .content .account:first-child, body .content li.skill, body .content .project, body .content .hover {
+    body .content li.skill, body .content .project, body .content .hover {
       margin-top: 30px; }
+    body .content li.skill:first-child {
+      margin-top: 0; }
     body .content .project .animation, body .content .hover .animation, body .content .project img, body .content .project .hover img, body .content .hover .project img, body .content .hover img, body .content .project .info .name, body .content .hover .info .name, body .content .project .desc, body .content .hover .desc {
       transition: all 0.5s linear; }
     body .content .project img, body .content .hover img {
@@ -153,6 +160,7 @@ body {
     body .content ul {
       list-style: inside url("../img/icons/bullet.png"); }
     body .content h2.subtitle {
+      margin-bottom: 30px;
       text-align: center;
       text-transform: uppercase; }
 

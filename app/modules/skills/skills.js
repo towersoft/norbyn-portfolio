@@ -25,8 +25,8 @@ angular.module('portfolio.skills', ['ngRoute'])
 
         vm.addSkill = function () {
             $http.post('http://localhost:8001/skills', JSON.stringify({
-                "description": "Socket IO",
-                "level": 10
+                "description": vm.description,
+                "level": vm.level
             }))
                 .success(function (data) {
                     console.log('post: ', data);
