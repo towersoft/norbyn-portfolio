@@ -217,7 +217,14 @@ body {
 @media (min-width: 1030px) {
   .content {
     margin: 0 10em;
+  }
 
+  .float-left {
+    float: left;
+  }
+
+  .float-right {
+    float: right;
   }
 }
 
