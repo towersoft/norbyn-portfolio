@@ -10,14 +10,17 @@ angular.module('portfolio.contact', ['ngRoute'])
         });
     }])
 
-    .controller('ContactCtrl', ['$http', function ($http) {
+    .controller('ContactCtrl', ['$http', 'config', function ($http, config) {
         var contact = this;
         contact.contacts = [];
-        $http.get("http://localhost:8001/contacts")
-            .success(function (data) {
-                contact.contacts = data;
-            })
-            .error(function (data) {
-                console.log('Error: ' + data);
-            });
+        contact.loadContact = function () {
+            $http.get(config.apiUrl + "/contacts")
+                .success(function (data) {
+                    contact.contacts = data;
+                })
+                .error(function (data) {
+                    console.log('Error: ' + data);
+                });
+        };
+
     }]);

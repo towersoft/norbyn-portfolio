@@ -1,6 +1,8 @@
-<div class="avatar">
-    <img ng-src="{{home.portfolio.avatar}}">
+<div ng-init="home.loadResume()">
+    <div class="avatar">
+        <img ng-src="{{home.portfolio.avatar}}">
+    </div>
+    <p class="description">
+        {{home.portfolio.description}}
+    </p>
 </div>
-<p class="description">
-    {{home.portfolio.description}}
-</p>

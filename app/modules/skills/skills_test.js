@@ -1,16 +1,17 @@
 'use strict';
 
-describe('portfolio.skills module', function() {
+describe('portfolio.skills module', function () {
 
-  beforeEach(module('portfolio.skills'));
+    beforeEach(module('portfolio.config'));
+    beforeEach(module('portfolio.skills'));
 
-  describe('skills controller', function(){
+    describe('skills controller', function () {
 
-    it('should ....', inject(function($controller) {
-      //spec body
-      var skillsCtrl = $controller('SkillsCtrl');
-      expect(skillsCtrl).toBeDefined();
-    }));
+        it('should ....', inject(function ($controller) {
+            //spec body
+            var skillsCtrl = $controller('SkillsCtrl');
+            expect(skillsCtrl).toBeDefined();
+        }));
 
-  });
+    });
 });

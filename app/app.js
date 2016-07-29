@@ -9,7 +9,8 @@ angular.module('portfolio', [
     'portfolio.contact',
     'portfolio.menu',
     'portfolio.version',
-    'portfolio.button'
+    'portfolio.button',
+    'portfolio.config'
 ]).
     config(['$routeProvider', function ($routeProvider) {
         $routeProvider.otherwise({redirectTo: '/home'});

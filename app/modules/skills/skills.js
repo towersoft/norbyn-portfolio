@@ -8,13 +8,13 @@ angular.module('portfolio.skills', ['ngRoute'])
             controllerAs: 'vm'
         });
     }])
-    .controller('SkillsCtrl', ['$http', function ($http) {
+    .controller('SkillsCtrl', ['$http', 'config', function ($http, config) {
         var vm = this;
         vm.skills = [];
         vm.buttonName = "New skill";
         vm.source = "img/icons/add.png";
         vm.loadAll = function () {
-            $http.get('http://localhost:8001/skills')
+            $http.get(config.apiUrl + '/skills')
                 .success(function (data) {
                     vm.skills = data;
                 })

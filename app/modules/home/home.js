@@ -10,14 +10,16 @@ angular.module('portfolio.home', ['ngRoute'])
         });
     }])
 
-    .controller('HomeCtrl', ['$http', function ($http) {
+    .controller('HomeCtrl', ['$http', 'config', function ($http, config) {
         var home = this;
         home.portfolio = {};
-        $http.get("http://localhost:8001/portfolio")
-            .success(function (data) {
-                home.portfolio = data;
-            })
-            .error(function (data) {
-                console.log('Error: ' + data);
-            });
+        home.loadResume = function () {
+            $http.get(config.apiUrl + "/portfolio")
+                .success(function (data) {
+                    home.portfolio = data;
+                })
+                .error(function (data) {
+                    console.log('Error: ' + data);
+                });
+        };
     }]);

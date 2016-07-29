@@ -101,11 +101,15 @@ body {
   body .content {
     min-height: 400px; }
     body .content .avatar {
-      border: 1px solid #d7d8d6;
-      float: left;
-      padding: 5px; }
+      float: left; }
       body .content .avatar img {
-        height: 200px; }
+        height: 120px;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
+        -webkit-box-shadow: 0 0 0 3px #fff, 0 0 0 4px #d7d8d6, 0 2px 5px 4px rgba(0, 0, 0, 0.2);
+        -moz-box-shadow: 0 0 0 3px #fff, 0 0 0 4px #d7d8d6, 0 2px 5px 4px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 0 0 3px #fff, 0 0 0 4px #d7d8d6, 0 2px 5px 4px rgba(0, 0, 0, 0.2); }
     body .content .avatar {
       display: inline-block;
       margin-right: 20px; }

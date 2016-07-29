@@ -8,17 +8,20 @@ angular.module('portfolio.projects', ['ngRoute'])
             controllerAs: 'project'
         });
     }])
-    .controller('ProjectsCtrl', ['$http', function ($http) {
+    .controller('ProjectsCtrl', ['$http', 'config', function ($http, config) {
         var project = this;
         project.projects = [];
         project.hoverClass = '';
-        $http.get("http://localhost:8001/projects")
-            .success(function (data) {
-                project.projects = data;
-            })
-            .error(function (data) {
-                console.log('Error: ' + data);
-            });
+
+        project.loadProjects = function () {
+            $http.get(config.apiUrl + "/projects")
+                .success(function (data) {
+                    project.projects = data;
+                })
+                .error(function (data) {
+                    console.log('Error: ' + data);
+                });
+        };
 
         project.animation = function (id) {
             console.log(id);

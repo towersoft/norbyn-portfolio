@@ -1,16 +1,17 @@
 'use strict';
 
-describe('portfolio.projects module', function() {
+describe('portfolio.projects module', function () {
 
-  beforeEach(module('portfolio.projects'));
+    beforeEach(module('portfolio.config'));
+    beforeEach(module('portfolio.projects'));
 
-  describe('projects controller', function(){
+    describe('projects controller', function () {
 
-    it('should ....', inject(function($controller) {
-      //spec body
-      var projectsCtrl = $controller('ProjectsCtrl');
-      expect(projectsCtrl).toBeDefined();
-    }));
+        it('should ....', inject(function ($controller) {
+            //spec body
+            var projectsCtrl = $controller('ProjectsCtrl');
+            expect(projectsCtrl).toBeDefined();
+        }));
 
-  });
+    });
 });

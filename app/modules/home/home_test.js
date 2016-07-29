@@ -1,16 +1,17 @@
 'use strict';
 
-describe('portfolio.home module', function() {
+describe('portfolio.home module', function () {
 
-  beforeEach(module('portfolio.home'));
+    beforeEach(module('portfolio.config'));
+    beforeEach(module('portfolio.home'));
 
-  describe('home controller', function(){
+    describe('home controller', function () {
 
-    it('should ....', inject(function($controller) {
-      //spec body
-      var homeCtrl = $controller('HomeCtrl');
-      expect(homeCtrl).toBeDefined();
-    }));
+        it('should ....', inject(function ($controller) {
+            //spec body
+            var homeCtrl = $controller('HomeCtrl');
+            expect(homeCtrl).toBeDefined();
+        }));
 
-  });
+    });
 });
