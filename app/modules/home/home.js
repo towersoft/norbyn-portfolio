@@ -10,11 +10,11 @@ angular.module('portfolio.home', ['ngRoute'])
         });
     }])
 
-    .controller('HomeCtrl', ['$http', 'config', function ($http, config) {
+    .controller('HomeCtrl', ['$http', 'config', 'PortfolioService', function ($http, config, PortfolioService) {
         var home = this;
         home.portfolio = {};
         home.loadResume = function () {
-            $http.get(config.apiUrl + "/portfolio")
+            PortfolioService.loadPortfolio()
                 .success(function (data) {
                     home.portfolio = data;
                 })

@@ -2,6 +2,7 @@
 
 describe('portfolio.home module', function () {
 
+    beforeEach(module('portfolio.PortfolioService'));
     beforeEach(module('portfolio.config'));
     beforeEach(module('portfolio.home'));
 

@@ -2,6 +2,7 @@
 
 describe('portfolio.skills module', function () {
 
+    beforeEach(module('portfolio.PortfolioService'));
     beforeEach(module('portfolio.config'));
     beforeEach(module('portfolio.skills'));
 

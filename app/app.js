@@ -10,7 +10,8 @@ angular.module('portfolio', [
     'portfolio.menu',
     'portfolio.version',
     'portfolio.button',
-    'portfolio.config'
+    'portfolio.config',
+    'portfolio.PortfolioService'
 ]).
     config(['$routeProvider', function ($routeProvider) {
         $routeProvider.otherwise({redirectTo: '/home'});
