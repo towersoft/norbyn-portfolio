@@ -23,7 +23,7 @@
     "prestart": "npm run build-css",
 	"start": "http-server -a localhost -p 8000 -c-1 ./app",
     
-    "build-css": "node-sass --include-path scss scss/app.scss app/app.css",
+    "build-css": "node-sass --include-path scss app/scss/app.scss app/css/app.css",
 
     "test": "karma start karma.conf.js",
     "test-single-run": "karma start karma.conf.js --single-run",
