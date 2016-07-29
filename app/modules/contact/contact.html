@@ -1,19 +1,10 @@
 <div class="contact">
     <h2 class="subtitle">Contact Information</h2>
 
-    <div class="account">
-        <div class="title">Email address:</div>
-        <div><a class="email" href="mailto:norbyn.leyva@towersoft.net" target="_top">norbyn.leyva@towersoft.net</a></div>
-    </div>
-
-    <div class="account">
-        <div class="title">Linkedin:</div>
-        <div><a class="link" href="https://www.linkedin.com/in/norbyn-leyva-ramiz-222a70108" target="_blank">Open my linkedin profile</a></div>
-    </div>
-
-    <div class="account">
-        <div class="title">Github:</div>
-        <div><a class="link" href="https://github.com/norbyn" target="_blank">Open my github profile</a></div>
+    <div class="account" ng-repeat="c in contact.contacts">
+        <div class="title">{{c.name}}</div>
+        <div><a ng-class="c.type" href="mailto:norbyn.leyva@towersoft.net" target="_top">{{c.value}}</a>
+        </div>
     </div>
 
 </div>

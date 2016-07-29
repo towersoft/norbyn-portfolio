@@ -11,8 +11,6 @@ angular.module('portfolio', [
     'portfolio.version',
     'portfolio.button'
 ]).
-    config(['$locationProvider', '$routeProvider', function ($locationProvider, $routeProvider) {
-        $locationProvider.hashPrefix('!');
-
+    config(['$routeProvider', function ($routeProvider) {
         $routeProvider.otherwise({redirectTo: '/home'});
     }]);

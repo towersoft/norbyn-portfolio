@@ -19,10 +19,7 @@
 <div class="header" ng-controller="MenuCtrl as mc">
     <h1 class="title">{{mc.title}}</h1>
     <ul class="navigation">
-        <li><a href="#!/home">Home page</a></li>
-        <li><a href="#!/projects">Projects</a></li>
-        <li><a href="#!/skills">Skills</a></li>
-        <li><a href="#!/contact">Contact</a></li>
+        <li ng-repeat="m in mc.menu"><a ng-href="#/{{m.href}}">{{m.value}}</a></li>
     </ul>
 </div>
 
@@ -30,13 +27,8 @@
     <div ng-view></div>
 </div>
 
-<script src="lib/angular.js"></script>
-<script src="lib/angular-route.js"></script>
-<script type="text/javascript" src="lib/angular-cookies.min.js"></script>
-<script type="text/javascript" src="lib/angular-local-storage.min.js"></script>
-<!--<script type="text/javascript" src="assets/js/angular-route.min.js"></script>-->
-<script type="text/javascript" src="lib/angular-translate.min.js"></script>
-<script type="text/javascript" src="lib/angular-translate-loader-static-files.min.js"></script>
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular-route/angular-route.js"></script>
 <script src="app.js"></script>
 <script src="modules/home/home.js"></script>
 <script src="modules/projects/projects.js"></script>
