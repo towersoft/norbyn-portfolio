@@ -1,7 +1,9 @@
 'use strict';
 
 angular.module('portfolio.skills')
-    .controller('SkillsCtrl', ['$http', 'config', SkillsCtrl]);
+    .controller('SkillsCtrl', SkillsCtrl);
+
+SkillsCtrl.$inject = ['$http', 'config'];
 
 function SkillsCtrl($http, config) {
     var sk = this;

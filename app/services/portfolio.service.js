@@ -1,7 +1,9 @@
 'use strict';
 
 angular.module('portfolio.PortfolioService', [])
-    .service('PortfolioService', ['$http', 'config', PortfolioService]);
+    .service('PortfolioService', PortfolioService);
+
+PortfolioService.$inject = ['$http', 'config'];
 
 function PortfolioService($http, config) {
     this.loadPortfolio = function () {
