@@ -1,13 +1,13 @@
-<div ng-init="vm.loadAll()">
+<div ng-init="sk.loadAll()">
     <h2 class="subtitle">Skills</h2>
     <ul class="float-left">
-        <li class="skill" ng-repeat="sk in vm.skills" ng-click="vm.deleteSkill(sk.id)">{{sk.description}}<span
-                class="scale">{{sk.level}}</span>
+        <li class="skill" ng-repeat="skill in sk.skills" ng-click="sk.deleteSkill(skill.id)">{{skill.description}}<span
+                class="scale">{{skill.level}}</span>
         </li>
     </ul>
     <div class="float-right">
-        <input type="text" placeholder="skill" ng-model="vm.description">
-        <input class="small" type="text" placeholder="level" ng-model="vm.level">
-        <custom-button src="vm.source" description="vm.buttonName" action="vm.addSkill()"></custom-button>
+        <input type="text" placeholder="skill" ng-model="sk.description">
+        <input class="small" type="text" placeholder="level" ng-model="sk.level">
+        <custom-button src="sk.source" description="sk.buttonName" action="sk.addSkill()"></custom-button>
     </div>
 </div>

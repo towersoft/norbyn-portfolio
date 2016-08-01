@@ -6,11 +6,12 @@ angular.module('portfolio', [
     'portfolio.home',
     'portfolio.projects',
     'portfolio.skills',
+    'portfolio.routes',
     'portfolio.contact',
     'portfolio.menu',
     'portfolio.version',
     'portfolio.button',
-    'portfolio.config',
+    'portfolio.constants',
     'portfolio.PortfolioService'
 ]).
     config(['$routeProvider', function ($routeProvider) {
