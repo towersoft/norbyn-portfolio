@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('portfolio.routes', ['ngRoute'])
+angular.module('portfolio.routes', [])
     .config(['$routeProvider', function ($routeProvider) {
         $routeProvider.when('/skills', {
             templateUrl: 'modules/skills/skills.html',
@@ -18,5 +18,5 @@ angular.module('portfolio.routes', ['ngRoute'])
             templateUrl: 'modules/home/home.html',
             controller: 'HomeCtrl',
             controllerAs: 'home'
-        });
+        }).otherwise({redirectTo: '/home'});
     }]);

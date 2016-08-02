@@ -3,18 +3,16 @@
 angular.module('portfolio.skills')
     .controller('SkillsCtrl', SkillsCtrl);
 
-SkillsCtrl.$inject = ['$http', 'config'];
+SkillsCtrl.$inject = ['PortfolioService'];
 
-function SkillsCtrl($http, config) {
+function SkillsCtrl(PortfolioService) {
     var sk = this;
     sk.skills = [];
-    sk.buttonName = "New skill";
-    sk.source = "img/icons/add.png";
     sk.loadAll = loadAll;
     sk.addSkill = addSkill;
 
     function loadAll() {
-        $http.get(config.apiUrl + '/skills')
+        PortfolioService.loadSkills()
             .success(function (data) {
                 sk.skills = data;
             })
@@ -24,7 +22,7 @@ function SkillsCtrl($http, config) {
     };
 
     function addSkill() {
-        $http.post('http://localhost:8001/skills', JSON.stringify({
+        PortfolioService.addSkill(JSON.stringify({
             "description": sk.description,
             "level": sk.level
         }))
@@ -38,7 +36,7 @@ function SkillsCtrl($http, config) {
     };
 
     sk.deleteSkill = function (id) {
-        $http.delete('http://localhost:8001/skills/' + id)
+        PortfolioService.deleteSkill(id)
             .success(function (data) {
                 console.log('delete: ', data);
                 sk.loadAll();

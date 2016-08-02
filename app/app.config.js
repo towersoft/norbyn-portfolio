@@ -12,8 +12,6 @@ angular.module('portfolio', [
     'portfolio.version',
     'portfolio.button',
     'portfolio.constants',
-    'portfolio.PortfolioService'
-]).
-    config(['$routeProvider', function ($routeProvider) {
-        $routeProvider.otherwise({redirectTo: '/home'});
-    }]);
+    'portfolio.PortfolioService',
+    'cfp.hotkeys'
+]);

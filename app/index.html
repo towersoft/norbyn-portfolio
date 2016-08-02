@@ -16,12 +16,7 @@
     <link rel="stylesheet" href="css/app.css">
 </head>
 <body>
-<div class="header" ng-controller="MenuCtrl as mc">
-    <h1 class="title">{{mc.title}}</h1>
-    <ul class="navigation">
-        <li ng-repeat="m in mc.menu"><a ng-href="#/{{m.href}}">{{m.value}}</a></li>
-    </ul>
-</div>
+<div ng-include="'modules/menu/menu.html'"></div>
 
 <div class="content">
     <div ng-view></div>
@@ -29,6 +24,7 @@
 
 <script src="bower_components/angular/angular.js"></script>
 <script src="bower_components/angular-route/angular-route.js"></script>
+<script src="bower_components/angular-hotkeys/build/hotkeys.min.js"></script>
 <script src="modules/menu/menu.module.js"></script>
 <script src="modules/menu/menu.controller.js"></script>
 <script src="modules/home/home.module.js"></script>

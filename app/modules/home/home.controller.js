@@ -1,7 +1,9 @@
 'use strict';
 
 angular.module('portfolio.home')
-    .controller('HomeCtrl', ['PortfolioService', HomeCtrl]);
+    .controller('HomeCtrl', HomeCtrl);
+
+HomeCtrl.$inject = ['PortfolioService'];
 
 function HomeCtrl(PortfolioService) {
     var home = this;
@@ -16,5 +18,5 @@ function HomeCtrl(PortfolioService) {
             .error(function (data) {
                 console.log('Error: ' + data);
             });
-    };
+    }
 }

@@ -1,0 +1,6 @@
+<div class="header" ng-controller="MenuCtrl as mc">
+    <h1 class="title">{{mc.title}}</h1>
+    <ul class="navigation">
+        <li ng-repeat="m in mc.menu"><a ng-href="#/{{m.href}}">{{m.value}}</a></li>
+    </ul>
+</div>
